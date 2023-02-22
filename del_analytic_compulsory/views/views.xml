@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+
+    <record id="res_user_inherit_id_new" model="ir.ui.view">
+            <field name="name">res.users</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+<!--               <xpath expr="//field[@name='partner_id']" position="before">-->
+<!--                <group>-->
+<!--                <field name="account_analytic_id"/>-->
+<!--                </group>-->
+<!--              </xpath>-->
+
+              <xpath expr="//notebook" position="inside">
+                <page string="Analytic Account">
+                   <group>
+                <field name="account_analytic_id"/>
+                </group>
+                </page>
+              </xpath>
+            </field>
+    </record>
+
+
+
+
+
+  </data>
+</odoo>
